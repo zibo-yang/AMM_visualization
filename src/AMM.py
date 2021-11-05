@@ -38,7 +38,7 @@ def exchange(m, n):
     #construct the animation
     fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
     plot = [ax.plot_surface(x, y, zarray[:,:,0], cmap="coolwarm", linewidth=0, antialiased=False, shade=True,zorder=4), ax.contour(x,y, zarray[:,:,0],[10])]
-    ani = animation.FuncAnimation(fig, update_plot, frn, fargs=(zarray, plot), interval=1000/fps)
+    anim = animation.FuncAnimation(fig, update_plot, frn, fargs=(zarray, plot), interval=1000/fps)
     
     #set the 3d axis-space
     ax.set_zlim(0,20)
@@ -51,5 +51,11 @@ def exchange(m, n):
     
     #show
     plt.show()
+    
+    #save
+    #f = r"/home/avalon/Desktop/AMM_visualiza/anim.gif"
+    writervideo = animation.FFMpegWriter(fps=60)
+    anim.save("./anim.gif", writer=writervideo)
+    plt.close()
     
 
