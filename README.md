@@ -3,16 +3,16 @@ AMM_visualization contains authur's programs to visualize the decentralized exch
 
 ## Installation
 In order to compile, please install matplotlib and python3 first:
-'''bash
+```bash
 python -m pip install -U pip
 python -m pip install -U matplotlib
-''' 
+``` 
 
 ## Usage
-'''bash
+```bash
 cd src/
 python3 main.py
-'''
+```
 
 ## Introduction of AMM
 An automated market maker (AMM) is a type of decentralized exchange (DEX) protocol that relies on a mathematical formula to price assets.
